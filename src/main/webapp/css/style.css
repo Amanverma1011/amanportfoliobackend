@@ -1,0 +1,250 @@
+/* ==============================
+   RESET
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   COLOR SYSTEM (COPIED STYLE)
+============================== */
+:root {
+  --bg-main: #f8fafc;
+  --bg-white: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --accent: #22c1dc;
+  --accent-dark: #334155;
+  --border: #e5e7eb;
+}
+
+/* ==============================
+   BASE
+============================== */
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ==============================
+   HEADER / NAV
+============================== */
+header {
+  background: var(--bg-white);
+  border-bottom: 1px solid var(--border);
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  gap: 26px;
+}
+
+nav ul li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+/* ==============================
+   MAIN LAYOUT
+============================== */
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 40px;
+}
+
+/* ==============================
+   SECTIONS
+============================== */
+section {
+  margin-bottom: 120px;
+}
+
+/* ==============================
+   HERO (HOME)
+============================== */
+#home h2 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+#home h2 span {
+  color: var(--accent);
+}
+
+#home p {
+  max-width: 720px;
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 34px;
+}
+
+/* ==============================
+   BUTTON STYLE (COPIED)
+============================== */
+#home div a {
+  display: inline-block;
+  padding: 12px 28px;
+  margin-right: 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+/* Primary */
+#home div a:first-child {
+  background: var(--accent-dark);
+  color: white;
+}
+
+/* Secondary */
+#home div a:not(:first-child) {
+  background: #e2e8f0;
+  color: var(--text-main);
+}
+
+#home div a:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ==============================
+   HEADINGS
+============================== */
+section header h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* ==============================
+   EXPERIENCE / PROJECTS
+============================== */
+#experience article,
+#projects article {
+  max-width: 850px;
+  margin-bottom: 48px;
+}
+
+#experience h3,
+#projects h3 {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+#experience p,
+#projects p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ==============================
+   SKILLS / LISTS
+============================== */
+#skills article,
+#certificates li {
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+/* ==============================
+   CONTACT
+============================== */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  padding: 12px 26px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* ==============================
+   ICON LINKS (NO HTML CHANGE)
+============================== */
+/* Assumes you already have GitHub & LinkedIn <a> links */
+
+a[href*="github"]::before {
+  content: "";
+  font-family: "Font Awesome 6 Brands";
+  margin-right: 6px;
+}
+
+a[href*="linkedin"]::before {
+  content: "";
+  font-family: "Font Awesome 6 Brands";
+  margin-right: 6px;
+}
+
+/* ==============================
+   FOOTER
+============================== */
+footer {
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  main {
+    padding: 60px 20px;
+  }
+
+  #home h2 {
+    font-size: 34px;
+  }
+}
